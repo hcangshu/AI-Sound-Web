@@ -1,0 +1,4 @@
+调用方法
+python train_new.py --character=0 --text=你好
+0 是模型第几个
+你好 是你要生成的文字
