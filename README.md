@@ -10,8 +10,9 @@ AI语音本地生成并发送的yunzai插件
 #### 安装教程
 
 1.  yunzai根目录下输入
-    https://gitee.com/sumght/vits_yunzai_plugin.git ./
+    git clone https://gitee.com/sumght/vits_yunzai_plugin.git ./
 2.  将ys.pth权重文件放入vits/ys/目录下
+    下载地址 https://pan.baidu.com/s/1Q4ujpNn56ZI_Caort5aIeg?pwd=rr4j
 3.  回到/vits，执行
     pip install -r requirements.txt
     安装环境
