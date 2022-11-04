@@ -1,4 +1,4 @@
-﻿import { segment } from "oicq";
+import { segment } from "oicq";
 import fetch from "node-fetch";
 import plugin from '../../../lib/plugins/plugin.js'
 import gsCfg from '../../genshin/model/gsCfg.js'
@@ -106,7 +106,7 @@ export class genshinSpeak extends plugin {
             if (error) {
                 console.log("生成失败", stderr);
                 e.reply(["生成失败，失败原因:" + stderr])
-            } else if (stdout) {
+            } else {
                 console.log("生成成功", stdout);
                 e.reply(segment.record("example.wav"))
             }
@@ -256,7 +256,7 @@ export class genshinSpeak extends plugin {
             if (error) {
                 console.log("生成失败", stderr);
                 e.reply(["生成失败，失败原因:"+stderr])
-            } else if (stdout) {
+            } else {
                 console.log("生成成功", stdout);
                 e.reply(segment.record("example.wav"))
                 sleep(3000)
