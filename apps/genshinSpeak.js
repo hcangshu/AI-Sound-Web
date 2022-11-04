@@ -165,7 +165,6 @@ export class genshinSpeak extends plugin {
     }
 	
 	//bh3音色 author：sumght
-    
     else if (Object.keys(bh3Speakers).includes(data[0])){
 	  let text = data[1].split("")
       const num = { "1": "一", "2": "二", "3": "三", "4": "四", "5": "五", "6": "六", "7": "七", "8": "八", "9": "九", "0": "零" }
