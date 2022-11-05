@@ -82,6 +82,19 @@ AI语音本地生成原神/崩三语音并发送的yunzai插件
     openjtalk的问题会出现在win用户上，linux则可以直接安装
     win用户解决方法查看https://www.bilibili.com/video/BV13t4y1V7DV
 
+4.  pyonpenjtalk 和 msvc字样
+
+    因为pyopenjtalk包需要前置cmake，
+
+    windows用户安装
+    ```
+    https://blog.csdn.net/m0_55048235/article/details/122277696
+    ```
+    linux用户安装
+    ```
+    https://huaweicloud.csdn.net/635605f0d3efff3090b58d3a.html
+    ```
+
 #### 其他
 [gitee地址](https://gitee.com/sumght/vits_yunzai_plugin/tree/master)
 预计下次更新会加入崩坏三人物语音生成，新的模型正在加紧炼制。
