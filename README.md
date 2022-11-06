@@ -108,6 +108,7 @@ AI语音本地生成原神/崩三语音并发送的yunzai插件
     ```
     OSError: cannot load library 'libsndfile.so': libsndfile.so: cannot open shared object file: No such file or directory
     ```
+    等一系列关于libsndfile的问题
     解决方法：https://www.jianshu.com/p/cc1a10a79cfa
 
     缺少libsndfile，查看 SoundFile官网，发现需要安装libsndfile
