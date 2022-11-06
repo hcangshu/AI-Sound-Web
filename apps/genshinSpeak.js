@@ -25,7 +25,7 @@ const noise = 0.667
 const noisew = 0.8
 // 生成时使用的 length_factor，可用于控制整体语速。默认为1.2。
 const length = 1.2
-
+var gpu = 0;
 function sleep(ms) {
     return new Promise(resolve=>setTimeout(resolve, ms))
 }
@@ -55,6 +55,10 @@ export class genshinSpeak extends plugin {
           reg: '^#*音色列表$',
           /** 执行方法 */
           fnc: 'speakerList'
+        },
+		{
+          reg: '^(开启gpu|关闭gpu|开启GPU|关闭GPU)$',
+          fnc: 'gpuSwitch'
         }
       ]
 
@@ -102,7 +106,10 @@ export class genshinSpeak extends plugin {
             }
         }
         console.log("输出角色序号:"+characternum)
-        var cmdStr = 'python .\\plugins\\vits-yunzai-Plugin\\vits\\run_new.py --character=' + characternum + ' --text=' + data[1];
+        var py='run_new.py'
+		if(gpu==0){py='run_new.py'};
+		if(gpu==1){py='run_old.py'};
+        var cmdStr = 'python .\\plugins\\vits-yunzai-Plugin\\vits\\'+ py +' --character=' + characternum + ' --text=' + data[1];
         exec(cmdStr, async function (error, stdout, stderr) {
             if (error) {
                 console.log("生成失败", stderr);
@@ -254,7 +261,10 @@ export class genshinSpeak extends plugin {
         }
 
         console.log("输出角色序号:"+characternum_bh3)
-        var cmdStr = 'python .\\plugins\\vits-yunzai-Plugin\\vits_bh3\\run_new.py --character=' + characternum_bh3 + ' --text=' + data[1];
+        var py='run_new.py'
+		if(gpu==0){py='run_new.py'};
+		if(gpu==1){py='run_old.py'};
+        var cmdStr = 'python .\\plugins\\vits-yunzai-Plugin\\vits_bh3\\'+ py +' --character=' + characternum_bh3 + ' --text=' + data[1];
         exec(cmdStr, async function (error, stdout, stderr) {
             if (error) {
                 console.log("生成失败", stderr);
@@ -294,6 +304,17 @@ export class genshinSpeak extends plugin {
       e.reply(["原神音色，支持别称:\n", segment.text(genshinSpeakers), "\n\n崩坏三音色,不支持别称:\n", segment.text("丽塔,伊甸,八重樱,卡莲,卡萝尔,姬子,布洛妮娅,希儿,帕朵菲莉丝,幽兰黛尔,德丽莎,格蕾修,梅比乌斯,渡鸦,爱莉希雅,琪亚娜,符华,维尔薇,芽衣,阿波尼亚,空律,识律"), "\n\n柚子社音色:\n", segment.text(Object.keys(youziSpeakers)), "\n\n其他音色:\n", segment.text(Object.keys(otherSpeakers)), "\n\n格式: 音色+说+要说的话"])
     return true
   }
+
+  async gpuSwitch(e){
+	   if(e=='开启gpu'&&'开启GPU'&&e.isMaster){
+		   gpu=1;
+		   e.reply('开启GPU推演成功')
+	   }
+	   if(e=='关闭gpu'&&'关闭GPU'&&e.isMaster){
+		   gpu=0;
+		   e.reply('关闭GPU推演成功')
+	   }
+   }
 }
 
 
