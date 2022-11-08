@@ -85,7 +85,7 @@ AI语音本地生成原神/崩三语音并发送的yunzai插件
     ```
     后继续安装环境。
 
-# pyopenjtalk安装
+# pyopenjtalk安装（依然是常见问题里的，常见问题不止上面三个，接着往下看）
 #### 极为重要，百分之90的人都是这儿卡壳，仔细查看
 3. window用户安装pyopenjtalk
     win用户解决方法查看https://www.bilibili.com/video/BV13t4y1V7DV
