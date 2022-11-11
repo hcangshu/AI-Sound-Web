@@ -11,8 +11,7 @@ qq群：433567006 （由于崩三模型还在不停炼，懒得每次都上传�
 2.  如果不确定是哪个依赖有问题，可以开启机器人，发送指令让它尝试生成，它会抛出错误。
 3.  生成语音报错请仔细看抛出的报错信息，并提交issues或者是在群里询问。目前版本尚在测试阶段，擅于面向百度编程.jpg
 4.  现已支持显卡推演，速度提高30-50倍，实测单核cpu推演生成189字句子需要6min，RTX2060显卡只需要3-5秒即可生成。开启gpu推演需要你有显卡和正确安装对应版本cuda，输入开启gpu/关闭gpu。
-5.  目前看来，不要用win server2012版本，msvc的组件时会弹出不兼容，即使安装好了cmake也报错。推荐要么server2019（和我一样），要么linux。还有人在issues提到，3.10的python安装torch会出现错误。
-6.  测试目前安装情况，需要查漏补缺，在yunzai根目录下运行
+5.  测试目前安装情况，需要查漏补缺，在yunzai根目录下运行
     ```
     python ./plugins/vits-yunzai-Plugin/vits/run_new.py --character=0 --text=你好啊，做一个测试。
     ```
@@ -83,7 +82,7 @@ qq群：433567006 （由于崩三模型还在不停炼，懒得每次都上传�
     ```
     pip install torch==1.6.0+cpu torchvision==0.7.0+cpu -f https://download.pytorch.org/whl/torch_stable.html
     ```    
-    下载如果很慢，请自行调整为清华源。
+  
     具体原因是这个1.6.0的torch版本比较老了，需要去pytorch历史里翻出来下载。
     确定安装好后，去requirements.txt删去
     ```
