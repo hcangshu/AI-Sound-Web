@@ -308,7 +308,7 @@ export class genshinSpeak extends plugin {
   }
 
   async speakerList(e) {
-      e.reply(segment.image('plugins/vits-yunzai-Plugin/help.jpg'))
+      e.reply(segment.image('plugins/vits-yunzai-Plugin/help/help.jpg'))
     return true
   }
 
