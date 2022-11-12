@@ -143,7 +143,7 @@ export class genshinSpeak extends plugin {
         if (data[1].length > 60) { 
             sleep_time = sleep_time + (data[1].length - 30)*400
         }
-        await e.reply("生成字数：" + data[1].length + " 预计将花费" + sleep_time /1000 + "秒，" + data[0] + "爱你哟~以及电脑请不要点击专供手机qq的无损版哦~")
+        await e.reply("生成字数：" + data[1].length)
         
         return true;
     }
@@ -299,7 +299,7 @@ export class genshinSpeak extends plugin {
         if (data[1].length > 100) {
             sleep_time = sleep_time + (data[1].length - 30) * 400
         }
-        await e.reply("生成字数：" + data[1].length+" 预计将花费"+sleep_time/1000+"秒，"+data[0]+"爱你哟~以及电脑请不要点击专供手机qq的无损版哦~")
+        await e.reply("生成字数：" + data[1].length)
         return true;
 	}
 	
