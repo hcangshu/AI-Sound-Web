@@ -308,7 +308,7 @@ export class genshinSpeak extends plugin {
   }
 
   async speakerList(e) {
-      e.reply(["原神音色，支持别称:\n", segment.text(genshinSpeakers), "\n\n崩坏三音色,不支持别称:\n", segment.text("丽塔,伊甸,八重樱,卡莲,卡萝尔,姬子,布洛妮娅,希儿,帕朵菲莉丝,幽兰黛尔,德丽莎,格蕾修,梅比乌斯,渡鸦,爱莉希雅,琪亚娜,符华,维尔薇,芽衣,阿波尼亚,空律,识律"), "\n\n柚子社音色:\n", segment.text(Object.keys(youziSpeakers)), "\n\n其他音色:\n", segment.text(Object.keys(otherSpeakers)), "\n\n格式: 音色+说+要说的话\n是否使用显卡推演：开启gpu/关闭gpu\n是否开启高清语音：开启高清语音/关闭高清语音\n崩三模型更新请添加433567006群文件下载"])
+      e.reply(["原神音色，支持别称:\n", segment.text(genshinSpeakers), "\n\n崩坏三音色,不支持别称:\n", segment.text("丽塔,伊甸,八重樱,卡莲,卡萝尔,姬子,布洛妮娅,希儿,帕朵菲莉丝,幽兰黛尔,德丽莎,格蕾修,梅比乌斯,渡鸦,爱莉希雅,琪亚娜,符华,维尔薇,芽衣,阿波尼亚,空律,识律"), "\n\n柚子社音色:\n", segment.text(Object.keys(youziSpeakers)), "\n\n其他音色:\n", segment.text(Object.keys(otherSpeakers)), "\n\n格式: 音色+说+要说的话\n是否使用显卡推演：开启gpu/关闭gpu\n是否开启高清语音：开启高清语音/关闭高清语音"])
     return true
   }
 
