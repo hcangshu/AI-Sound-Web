@@ -47,7 +47,7 @@ export class genshinSpeak extends plugin {
       rule: [
         {
           /** 命令正则匹配 */
-          reg: "^#*(.*)说(.*)$",  //匹配消息正则，命令正则
+          reg: "^#*(.*)说(.*)",  //匹配消息正则，命令正则
           /** 执行方法 */
           fnc: 'genshinSpeak'
         },
@@ -94,6 +94,7 @@ export class genshinSpeak extends plugin {
 
     // 原神音色
     if (genshinSpeakers.includes(data[0])) {
+      data[1]=data[1].replace(/\\n/g,'。').replace(/\\r/g,'。').replace(/\ +/g, "").replace(/[\r\n]/g, "。").replace("“", "，").replace("”", "，").replace(".", "。").replace(",", "，").replace("(", "，").replace(")", "，").replace("～", "，")
       // 原神语音接口不支持阿拉伯数字,所以将数字转为汉字
       let text = data[1].split("")
       const num = { "1": "一", "2": "二", "3": "三", "4": "四", "5": "五", "6": "六", "7": "七", "8": "八", "9": "九", "0": "零" }
@@ -183,6 +184,7 @@ export class genshinSpeak extends plugin {
 	
 	//bh3音色 author：sumght
     else if (Object.keys(bh3Speakers).includes(data[0])){
+      data[1] = data[1].replace(/\\n/g,'。').replace(/\\r/g,'。').replace(/\ +/g, "").replace(/[\r\n]/g, "。").replace("“", "，").replace("”", "，").replace(".", "。").replace(",", "，").replace("(", "，").replace(")", "，")
 	  let text = data[1].split("")
       const num = { "1": "一", "2": "二", "3": "三", "4": "四", "5": "五", "6": "六", "7": "七", "8": "八", "9": "九", "0": "零" }
       for (let i = 0; i < text.length; i++) {
