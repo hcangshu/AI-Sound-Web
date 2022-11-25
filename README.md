@@ -105,7 +105,6 @@ https://www.bilibili.com/video/BV1ot4y1P7a7
 3. window用户安装pyopenjtalk
     win用户解决方法查看https://www.bilibili.com/video/BV13t4y1V7DV
 
-    现在更新也更简单的方法，请查看https://gitee.com/sumght/vits_yunzai_plugin/issues/I6088Z 直接下载编译好的文件开箱即用
 
 4.  linux用户安装pyopenjtalk (感谢[@xi-yun](https://gitee.com/xi-yun)提供)
 
