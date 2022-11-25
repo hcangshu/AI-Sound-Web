@@ -26,7 +26,7 @@ const noisew = 0.8
 // 生成时使用的 length_factor，可用于控制整体语速。默认为1.2。
 const length = 1.2
 var gpu = 0;
-var ex_wav = 0;
+var ex_wav = 1;
 function sleep(ms) {
     return new Promise(resolve=>setTimeout(resolve, ms))
 }
