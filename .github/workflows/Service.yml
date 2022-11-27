@@ -32,4 +32,4 @@ jobs:
         run: |
           sudo sysctl -w net.core.rmem_max=25000000
           nohup python main.py &
-          ./cloudflared tunnel --url 0.0.0.0:8000
+          ./cloudflared tunnel --url 127.0.0.1:8088
