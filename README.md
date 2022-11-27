@@ -7,4 +7,4 @@
 
 **提示：** 当然如果想自己‘偷偷’享受一波的话，可以直接`clone`到本地运行，可以参考[Action](https://github.com/LemonFan-maker/AI-Sound-Web/blob/master/.github/workflows/Service.yml)或者直接参考[Setup.md](./Setup.md)。
 
-**感谢：** 如果某位大神修好了，可以直接提出*PR*(Pull Request)。
+**感谢：** 如果某位大神修好了，可以直接提出[*PR*(Pull Request)](https://github.com/LemonFan-maker/AI-Sound-Web/pulls)。
