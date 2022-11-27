@@ -8,6 +8,7 @@ jobs:
       - uses: actions/checkout@v3
       - name: "准备依赖模块"
         run: |
+          mkdir record
           sudo apt-get install libsndfile1
           python -m pip install --upgrade pip
           pip install --upgrade setuptools
