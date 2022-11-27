@@ -10,6 +10,8 @@ jobs:
         run: |
           sudo apt-get install libsndfile1
           sudo apt-get install aria2
+          pip install --upgrade setuptools
+          pip install --upgrade importlib-metadata
           pip install -r requirements.txt
           cd ys
           aria2c https://github.com/LemonFan-maker/Download-Models/releases/download/ys/ys.pth
