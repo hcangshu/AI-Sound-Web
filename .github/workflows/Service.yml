@@ -9,7 +9,6 @@ jobs:
       - name: "准备依赖模块"
         run: |
           sudo apt-get install libsndfile1
-          sudo apt-get install aria2
           python -m pip install --upgrade pip
           pip install --upgrade setuptools
           pip install --upgrade importlib-metadata
