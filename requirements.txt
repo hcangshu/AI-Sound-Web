@@ -4,9 +4,9 @@ matplotlib==3.3.1
 numpy==1.21.6
 phonemizer==2.2.1
 scipy==1.5.2
-tensorboard==2.3.0
-torch==1.6.0
-torchvision==0.7.0
+tensorboard==2.9.0 
+torch==1.12.1 
+torchvision==0.13.1
 Unidecode==1.1.1
 pyopenjtalk==0.2.0
 jamo==0.4.1
@@ -14,3 +14,5 @@ pypinyin==0.44.0
 jieba==0.42.1
 cn2an==0.5.17
 pypinyin_dict
+fastapi
+uvicorn
