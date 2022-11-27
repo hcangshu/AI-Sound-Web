@@ -6,3 +6,5 @@
 **苍白的解释：** 在自己计算机上运行丝毫没有压力，我不是很理解为什么会报错(已知的环境配置基本一致，恕我才疏学浅)??
 
 **提示：** 当然如果想自己‘偷偷’享受一波的话，可以直接`clone`到本地运行，可以参考[Action](https://github.com/LemonFan-maker/AI-Sound-Web/blob/master/.github/workflows/Service.yml)或者直接参考[Setup.md](./Setup.md)。
+
+**感谢：** 如果某位大神修好了，可以直接提出*PR*(Pull Request)。
