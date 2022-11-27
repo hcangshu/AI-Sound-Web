@@ -17,8 +17,6 @@ jobs:
           cd ys
           aria2c https://github.com/LemonFan-maker/Download-Models/releases/download/ys/ys.pth
           cd ..
-          aria2c https://github.com/LemonFan-maker/Download-Models/releases/download/pyopenjtalk/pyopenjtalk.tgz
-          tar -xvf pyopenjtalk.tgz
       - name: "准备内核文件"
         run: |
           cd monotonic_align/
