@@ -87,4 +87,4 @@ def run_moudle(speaker, text):
     return FileResponse(ava)
 
 
-uvicorn.run(app, host='127.0.0.1', port=8089)
+uvicorn.run(app, host='127.0.0.1', port=8088)
