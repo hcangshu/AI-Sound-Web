@@ -1,0 +1,31 @@
+name: AI-Sound
+on:
+  workflow_dispatch:
+jobs:
+  OCR:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v3
+      - name: "准备依赖模块"
+      - run: |
+          sudo apt-get install aria2
+          pip install -r requirements.txt
+          cd ys
+          aria2c https://github.com/LemonFan-maker/Download-Models/releases/download/ys/ys.pth
+          cd ..
+          aria2c https://github.com/LemonFan-maker/Download-Models/releases/download/pyopenjtalk/pyopenjtalk.tgz
+          tar -xvf pyopenjtalk.tgz
+      - name: "准备内核文件"
+      - run: |
+          cd monotonic_align/
+          python setup.py build_ext --inplace
+      - name: "准备内网穿透服务"
+      - run: |
+          aria2c "https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64"
+          mv cloudflared-linux-amd64 cloudflared
+          chmod a+x cloudflared
+      - name: "启动服务"
+      - run: |
+          sudo sysctl -w net.core.rmem_max=25000000
+          nohup python main.py &
+          ./cloudflared tunnel --url 0.0.0.0:8000
